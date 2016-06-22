@@ -44,5 +44,16 @@ int main() {
   cout << "tbl.name : " << name << endl;
   lua_pop(L, 1);
 
+  lua_getglobal(L, "helloLua");
+  bRet = lua_pcall(L, 0, 1, 0);
+  if(bRet) return 1;
+  if(lua_isstring(L, -1)){
+    string msg = lua_tostring(L, -1); 
+    cout<<"helloLua: " << msg << endl;
+  }
+  lua_pop(L, 1);
+
+  lua_close(L);
+
   return 0;
 }
