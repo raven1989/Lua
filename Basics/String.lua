@@ -1,6 +1,7 @@
 #!/usr/local/bin/lua
 
 print(string.gsub("aaaa", "a", "z", 3))
+print(string.sub("abcdefgh", 2, 4))
 print(string.find("Hello Lua user", "Lua", 1))
 print(string.reverse("Lua"))
 print(string.format("Lua format: %.2f",10.3))
@@ -13,3 +14,4 @@ print(string.upper("lua"))
 print(string.lower("LUA"))
 date = 2; month = 1; year = 2014
 print(string.format("日期格式化 %02d/%02d/%03d", date, month, year))
+print(string.format("0x%02X","15"))
